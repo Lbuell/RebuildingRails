@@ -1,4 +1,4 @@
-Copyright (c) 2014 lbuell
+Copyright (c) 2012 Noah Gibbs
 
 MIT License
 

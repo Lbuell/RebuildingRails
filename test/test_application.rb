@@ -6,24 +6,16 @@ end
 class RulersAppTest < Test::Unit::TestCase
   include Rack::Test::Methods
 
-    def app
-      TestApp.new
-    end
+  def app
+    TestApp.new
+  end
 
-    def test_request
-      get "/"
+  def test_request
+    get "/"
 
-      assert last_response.ok?
-      body = last_response.body
-      assert body["Hello"]
-    end
-
-    def test_request2
-      get "/"
-
-      assert last_response.ok?
-      body = last_response.body
-      assert body["Rulers!"]
-    end
+    assert last_response.ok?
+    body = last_response.body
+    assert body["Hello"]
+  end
 
 end
