@@ -1,4 +1,5 @@
 require "rulers"
+require "serveall"
 
 $LOAD_PATH << File.join(File.dirname(__FILE__),
                         "..","app",
