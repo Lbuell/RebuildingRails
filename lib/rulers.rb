@@ -2,6 +2,7 @@ require "rulers/version"
 require "rulers/routing"
 require "rulers/util"
 require "rulers/dependencies"
+require "rulers/controller"
 
 module Rulers
   class Application
@@ -31,6 +32,11 @@ module Rulers
 
     def env
       @env
+    end
+    def controller_name
+      klass = self.class
+      klass = klass.to_s.gsub /Controller$/, ""
+      Rulers.to_underscore klass
     end
   end
 end
