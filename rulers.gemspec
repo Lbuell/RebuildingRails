@@ -6,8 +6,8 @@ require 'rulers/version'
 Gem::Specification.new do |spec|
   spec.name = "rulers"
   spec.version = Rulers::VERSION
-  spec.authors = ["elliotec"]
-  spec.email = ["elliotecweb@gmail.com"]
+  spec.authors = ["lbuell"]
+  spec.email = ["liamcbuell@gmail.com"]
   spec.summary = %q{This is a sample gem for the rebuilding rails book.}
   spec.description = %q{This gem is designed to emulate rails and teach me to build it from the ground up, it's a Rack-based web framework but more awesome.}
   spec.homepage = ""
