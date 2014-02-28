@@ -27,9 +27,11 @@ module Rulers
         controller_name, "#{view_name}.html.erb"
       template = File.read filename
       eruby = Erubis::Eruby.new(template)
+      eruby.result locals.merge(:env => env)
+      #attempting to add instance variables to controllers
       instance_variables.each do |var|
       eruby.instance_variable_set(var, instance_variable_get(var))
-      eruby.result locals.merge(:env => env)
+      end
     end
     def response(text, status = 200, headers = {})
 
