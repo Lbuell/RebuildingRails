@@ -27,9 +27,8 @@ module Rulers
         controller_name, "#{view_name}.html.erb"
       template = File.read filename
       eruby = Erubis::Eruby.new(template)
-      instance_variables.each do |var| #in class exercise, setting controller instance variables to be available in view.
-      eruby.instance_variable_set(var, instance_variable_get(var))#implicit self.
-      end
+      instance_variables.each do |var|
+      eruby.instance_variable_set(var, instance_variable_get(var))
       eruby.result locals.merge(:env => env)
     end
     def response(text, status = 200, headers = {})
@@ -40,7 +39,7 @@ module Rulers
                                      headers)
     end
 
-    def get_response # Only for Rulers
+    def get_response
       @response
     end
     def render_response(*args)
